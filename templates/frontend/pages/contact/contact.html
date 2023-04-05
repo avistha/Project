@@ -1,0 +1,35 @@
+{% extends 'frontend/master/master.html' %}
+
+{% block content%}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Contact Page </h1>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="name">Name</label>
+                        <input type="text" required id="name" name="name" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Email</label>
+                        <input type="email" required id="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" class="form-control">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="message">message</label>
+                        <textarea id="message" name="message" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                        <button class="btn btn-success">Send</button>
+                    </div> 
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
