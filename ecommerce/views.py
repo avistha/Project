@@ -35,7 +35,7 @@ def contact(request):
 
 def product_list(request):
     productData = Product.objects.order_by('-id')
-    paginator = Paginator(productData, 2)
+    paginator = Paginator(productData, 4)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     data={

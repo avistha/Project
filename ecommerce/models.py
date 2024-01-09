@@ -76,7 +76,6 @@ class OrderItem(models.Model):
     quantity = models.IntegerField(default=1)
 
 
-
 class Banner(models.Model):
     name = models.CharField(max_length=100,unique=True)
     image = models.ImageField(upload_to ='media/banners')
